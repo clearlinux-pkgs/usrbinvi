@@ -1,5 +1,5 @@
 PKG_NAME := usrbinvi
-URL = http://$(CGIT_BASE_URL)/projects/usrbinvi/snapshot/usrbinvi-1.tar.xz
+URL = $(CGIT_BASE_URL)/projects/usrbinvi/snapshot/usrbinvi-2.tar.xz
 ARCHIVES = 
 
 include ../common/Makefile.common
