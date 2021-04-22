@@ -4,7 +4,7 @@
 #
 Name     : usrbinvi
 Version  : 2
-Release  : 2
+Release  : 3
 URL      : http://localhost/cgit/projects/usrbinvi/snapshot/usrbinvi-2.tar.xz
 Source0  : http://localhost/cgit/projects/usrbinvi/snapshot/usrbinvi-2.tar.xz
 Summary  : No detailed summary available
@@ -42,14 +42,14 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1582579318
+export SOURCE_DATE_EPOCH=1619061689
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
 export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
 export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 %autogen --disable-static
 make  %{?_smp_mflags}
@@ -59,10 +59,10 @@ export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-make VERBOSE=1 V=1 %{?_smp_mflags} check
+make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1582579318
+export SOURCE_DATE_EPOCH=1619061689
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/usrbinvi
 cp %{_builddir}/usrbinvi-2/COPYING.Apache-2.0 %{buildroot}/usr/share/package-licenses/usrbinvi/2b8b815229aa8a61e483fb4ba0588b8b6c491890
